@@ -1,6 +1,6 @@
 import Image from "next/image";
-import imageHeroMobile from "./images/image-hero-mobile.png";
-import imageHeroDesktop from "./images/image-hero-desktop.png";
+import imageHeroMobile from "/public/image-hero-mobile.png";
+import imageHeroDesktop from "/public/image-hero-desktop.png";
 import imageClientDatabiz from "/public/client-databiz.svg";
 import imageClientAudiophile from "/public/client-audiophile.svg";
 import imageClientMeet from "/public/client-meet.svg";
@@ -9,7 +9,6 @@ import imageClientMaker from "/public/client-maker.svg";
 import { getImageProps } from "next/image";
 
 export default function LandingPage() {
-  //
   const common = { alt: "Graphic shapes" };
   const {
     props: { srcSet: mobile },
@@ -17,7 +16,7 @@ export default function LandingPage() {
     ...common,
     width: imageHeroMobile.width,
     height: imageHeroMobile.height,
-    src: imageHeroMobile,
+    src: `${process.env.BASE_PATH}/image-hero-mobile.png`,
   });
   const {
     props: { srcSet: desktop, ...rest },
@@ -25,7 +24,7 @@ export default function LandingPage() {
     ...common,
     width: imageHeroDesktop.width,
     height: imageHeroDesktop.height,
-    src: imageHeroDesktop,
+    src: `${process.env.BASE_PATH}/image-hero-desktop.png`,
   });
 
   const desktopMinWidth = `(min-width: ${process.env.DESKTOP_BREAKPOINT})`;
@@ -36,6 +35,13 @@ export default function LandingPage() {
       className="gPageContentWrapper
                    lg:gPageContentWrapperDesktop lg:flex-row"
     >
+      {/* <Image
+        src={`${process.env.BASE_PATH}/image-hero-mobile.png`}
+        width="400"
+        height="400"
+        className=""
+        alt="asd"
+      /> */}
       <picture className="self-center lg:order-2">
         <source media={desktopMinWidth} srcSet={desktop} />
         <source media={mobileMaxWidth} srcSet={mobile} />

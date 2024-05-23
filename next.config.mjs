@@ -2,7 +2,10 @@
 
 const isProduction = process.env.NODE_ENV === "production";
 
-let nextConfig = {};
+let nextConfig = {
+  basePath: "/intro_section_with_dropdown_navigation",
+  assetPrefix: "/intro_section_with_dropdown_navigation/",
+};
 
 if (isProduction) {
   nextConfig = {
