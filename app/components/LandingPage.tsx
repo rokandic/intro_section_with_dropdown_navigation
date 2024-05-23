@@ -15,13 +15,17 @@ export default function LandingPage() {
     props: { srcSet: mobile },
   } = getImageProps({
     ...common,
-    src: imageHeroMobile,
+    width: imageHeroMobile.width,
+    height: imageHeroMobile.height,
+    src: imageHeroMobile.src,
   });
   const {
     props: { srcSet: desktop, ...rest },
   } = getImageProps({
     ...common,
-    src: imageHeroDesktop,
+    width: imageHeroDesktop.width,
+    height: imageHeroDesktop.height,
+    src: imageHeroDesktop.src,
   });
 
   const desktopMinWidth = `(min-width: ${process.env.DESKTOP_BREAKPOINT})`;
