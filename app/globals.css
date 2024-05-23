@@ -2,32 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+html {
+  font-size: calc(18rem / 16);
+}
+
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
+
+@layer base {
+  .gPageContentWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+  .gPageContentWrapperDesktop {
+    align-items: flex-start;
+    justify-content: center;
+    gap: 4rem;
+  }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .gh1 {
+    margin-top: 2rem;
+    font-size: 1.95rem;
+    line-height: 3rem;
+    font-weight: 700;
+    color: theme("colors.almostBlack");
+  }
+
+  .gh1Desktop {
+    margin-top: 4rem;
+    font-size: 4.5rem;
+    line-height: 1;
+    letter-spacing: -0.025em;
   }
 }
