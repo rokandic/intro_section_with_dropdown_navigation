@@ -17,7 +17,7 @@ export default function LandingPage() {
     ...common,
     width: imageHeroMobile.width,
     height: imageHeroMobile.height,
-    src: imageHeroMobile.src,
+    src: imageHeroMobile,
   });
   const {
     props: { srcSet: desktop, ...rest },
@@ -25,7 +25,7 @@ export default function LandingPage() {
     ...common,
     width: imageHeroDesktop.width,
     height: imageHeroDesktop.height,
-    src: imageHeroDesktop.src,
+    src: imageHeroDesktop,
   });
 
   const desktopMinWidth = `(min-width: ${process.env.DESKTOP_BREAKPOINT})`;
