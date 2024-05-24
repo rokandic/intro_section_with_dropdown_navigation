@@ -13,6 +13,9 @@ if (isProduction) {
     assetPrefix: "/intro_section_with_dropdown_navigation/",
     output: "export",
     reactStrictMode: true,
+    images: {
+      unoptimized: true,
+    },
   };
 }
 
