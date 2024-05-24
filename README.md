@@ -34,9 +34,9 @@ Users should be able to:
 
 ![](./screenshot_mobile_expanded.png)
 
-<!-- ### Links
+### Links
 
-- [Live Site](https://rokandic.github.io/intro_section_with_dropdown_navigation/) -->
+- [Live Site](https://rokandic.github.io/intro_section_with_dropdown_navigation/)
 
 ### Built with
 
