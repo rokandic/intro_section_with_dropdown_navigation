@@ -35,13 +35,6 @@ export default function LandingPage() {
       className="gPageContentWrapper
                    lg:gPageContentWrapperDesktop lg:flex-row"
     >
-      {/* <Image
-        src={`${process.env.BASE_PATH}/image-hero-mobile.png`}
-        width="400"
-        height="400"
-        className=""
-        alt="asd"
-      /> */}
       <picture className="self-center lg:order-2">
         <source media={desktopMinWidth} srcSet={desktop} />
         <source media={mobileMaxWidth} srcSet={mobile} />
@@ -52,14 +45,14 @@ export default function LandingPage() {
         />
       </picture>
       <article
-        className="flex flex-col items-center justify-start gap-2 
+        className="flex flex-col items-center justify-start gap-2
                   lg:order-1 lg:max-w-[32.5rem] lg:basis-3/4 lg:items-start lg:gap-10 lg:pt-8"
       >
         {/* prettier-ignore */}
         <h1
           className="gh1
                     lg:gh1Desktop"
-        >Make <br className="hidden lg:inline"/>remote work 
+        >Make <br className="hidden lg:inline"/>remote work
         </h1>
         <p
           className="px-4 text-center text-sm leading-6 tracking-wide text-almostBlack
@@ -78,7 +71,7 @@ export default function LandingPage() {
           Learn more
         </a>
         <div
-          className="mt-10 flex h-8 w-full max-w-5xl flex-row justify-around align-middle
+          className="mt-10 flex h-8 w-full max-w-5xl flex-row flex-wrap justify-around gap-4 align-middle
                        lg:mt-16 lg:flex-wrap lg:justify-start lg:gap-9"
         >
           <Image

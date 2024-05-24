@@ -3,14 +3,13 @@
 const isProduction = process.env.NODE_ENV === "production";
 
 let nextConfig = {
-  basePath: "/intro_section_with_dropdown_navigation",
-  assetPrefix: "/intro_section_with_dropdown_navigation/",
+  basePath: process.env.BASE_PATH,
+  assetPrefix: `${process.env.BASE_PATH}/`,
 };
 
 if (isProduction) {
   nextConfig = {
-    basePath: "/intro_section_with_dropdown_navigation",
-    assetPrefix: "/intro_section_with_dropdown_navigation/",
+    ...nextConfig,
     output: "export",
     reactStrictMode: true,
     images: {
